@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dish Search</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Search for a Dish</h1>
+        <form method="GET" action="">
+            <input type="text" name="q" placeholder="Enter dish name" value="{{ request.GET.q|default_if_none:'' }}">
+            <button type="submit">Search</button>
+        </form>
+        {% if results %}
+            <ul class="results">
+                {% for dish in results %}
+                    <li>
+                        <span class="dish-name">{{ dish.name }}</span><br>
+                        <span class="dish-description">{{ dish.description }}</span><br>
+                        <span class="dish-price">${{ dish.price }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No results found.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
