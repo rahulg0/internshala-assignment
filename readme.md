@@ -23,7 +23,4 @@ All three files are a must to move further.
 Thanks,
 Sandeepan
 
-Thanks,
-Sandeepan
-
 Submission deadline: 15 July, 2024
