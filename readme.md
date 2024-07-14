@@ -1,17 +1,15 @@
 # INTERNSHALA ASSIGNMENT
 
-
-
 Thank you for your interest in our internship opening. As a next step, we are expecting you to complete a short assignment.
 
-Using the following:
+### Using the following:
 
 1. Django,
 2. file-based SQLite
 3. Data given at link:  [https://python-exercise.s3.ap-south-1.amazonaws.com/restaurants_small.csv](https://python-exercise.s3.ap-south-1.amazonaws.com/restaurants_small.csv)
    Design an admin-template based Django search application that can search through the names of dishes and recommend the best match for the same.
 
-You need to submit {all three of them compulsorily):
+### You need to submit {all three of them compulsorily):
 
 1. Working code with requirements.txt
 2. Working SQLite db file.
@@ -23,4 +21,4 @@ All three files are a must to move further.
 Thanks,
 Sandeepan
 
-Submission deadline: 15 July, 2024
+**Submission deadline: 15 July, 2024**
