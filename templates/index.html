@@ -10,17 +10,18 @@
 <body>
     <div class="container">
         <h1>Search for a Dish</h1>
-        <form method="GET" action="">
-            <input type="text" name="q" placeholder="Enter dish name" value="{{ request.GET.q|default_if_none:'' }}">
+        <form method="GET">
+            {% csrf_token %}
+            <input type="text" name="q" placeholder="Enter dish name">
             <button type="submit">Search</button>
         </form>
         {% if results %}
             <ul class="results">
                 {% for dish in results %}
                     <li>
-                        <span class="dish-name">{{ dish.name }}</span><br>
-                        <span class="dish-description">{{ dish.description }}</span><br>
-                        <span class="dish-price">${{ dish.price }}</span>
+                        <span class="dish-name">{{ dish.item }}</span><br>
+                        <span class="dish-price">INR {{ dish.price }}</span><br>
+                        <span class="dish-restaurant">{{ dish.restaurant }}</span><br>
                     </li>
                 {% endfor %}
             </ul>
